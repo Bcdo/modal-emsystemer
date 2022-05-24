@@ -156,4 +156,3 @@ class Modal extends HTMLElement {
   }
 }
 customElements.define("kp-modal", Modal);
-const test = new Modal();

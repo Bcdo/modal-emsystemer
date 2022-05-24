@@ -4,6 +4,8 @@ The modal and its content is created as a web component. The content is not dyna
 
 There is currently no logic to determine who will get the pop-up, and it will open whenever the page has loaded.
 
+Use as is, or modify as you see fit.
+
 ### Usage
 
 Import the modal.js in the HTML where it is wanted
@@ -23,3 +25,5 @@ And that should be it! The modal will be created and the content will be loaded.
 ### Considerations
 
 The image that is loaded in the modal has the same path as the modal file, and should be adjusted accordingly if the image is loaded form a seperate folder.
+
+The index.html file can be deleted as it is used for testing.
