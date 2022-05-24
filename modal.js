@@ -35,6 +35,7 @@ class Modal extends HTMLElement {
               text-align: center;
               min-width: 500px;
               max-width: 500px;
+              border-radius: 35px;
           }
 
           .modal-content p {
@@ -59,6 +60,7 @@ class Modal extends HTMLElement {
           }
           .read-button:hover {
             background-color: #34abd3;
+            cursor: pointer;
           }
 
           /* Exitknapp */
@@ -81,6 +83,7 @@ class Modal extends HTMLElement {
           background-color: #0e6fba;
           color: white;
           font-family: "Roboto", sans-serif;
+          border-radius: 35px 35px 0 0;
           }
 
           .modal-image {
@@ -91,7 +94,7 @@ class Modal extends HTMLElement {
               width: 350px;
           }
 
-          .modal-body {padding: 2px 16px; margin: 20px 2px}
+          .modal-body {padding: 2px 16px; margin: 20px 2px;}
 
           @media screen and (max-width: 768px) {
             .modal-content {
