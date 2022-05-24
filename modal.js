@@ -124,7 +124,7 @@ class Modal extends HTMLElement {
               <img src="./Produkt_redigert_web.jpg" alt="Unit One undersentral" class="modal-image">
               <p>EM Systemer har nå en kampanje rettet mot våre EM Portal kunder som har denne Unit One undersentralen som ble produsert fra 1994 til 1999 og som i gjennomsnitt har hatt 220.000 driftstimer!</p>
               
-              <a href="https://emsystemer.no/" target="_blank" class="read-button">Les mer</a>
+              <a href="https://emsystemer.no/kampanjer" target="_blank" class="read-button">Les mer</a>
               </div>
           </div>
       </div>
