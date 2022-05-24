@@ -38,7 +38,7 @@ class Modal extends HTMLElement {
           }
 
           .modal-content p {
-            width: 70%;
+            width: 75%;
             margin: auto;
             padding: 30px;
           }
