@@ -2,7 +2,6 @@ class Modal extends HTMLElement {
   constructor() {
     super();
     this._modalVisible = true;
-    console.log(this._modalVisible);
     this._modal;
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
@@ -28,12 +27,38 @@ class Modal extends HTMLElement {
               margin: auto;
               padding: 0;
               border: 1px solid #888;
-              width: 80%;
+              width: 35%;
               box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-              -webkit-animation-name: animatetop;
-              -webkit-animation-duration: 0.4s;
-              animation-name: animatetop;
-              animation-duration: 0.4s
+              font-family: "Roboto", sans-serif;
+              line-height: 1.5;
+              color: #444;
+              text-align: center;
+              min-width: 500px;
+              max-width: 500px;
+          }
+
+          .modal-content p {
+            width: 70%;
+            margin: auto;
+            padding: 30px;
+          }
+
+          .read-button {
+            background-color: #39bce8;
+            border: none;
+            color: white;
+            padding: 12px 18px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 13px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 25%;
+            border-radius: 35px;
+          }
+          .read-button:hover {
+            background-color: #34abd3;
           }
 
           /* Exitknapp */
@@ -53,22 +78,53 @@ class Modal extends HTMLElement {
 
           .modal-header {
           padding: 2px 16px;
-          background-color: #000066;
+          background-color: #0e6fba;
           color: white;
+          font-family: "Roboto", sans-serif;
+          }
+
+          .modal-image {
+              width: 50%;
+              margin: 0 auto;
+              display: block;
+              height: 254px;
+              width: 350px;
           }
 
           .modal-body {padding: 2px 16px; margin: 20px 2px}
+
+          @media screen and (max-width: 768px) {
+            .modal-content {
+              min-width: 300px;
+              font-size: 0.8em;
+          
+            }
+            .modal-content p {
+              width: 100%;
+              padding: 20px 0;
+              margin: 0;
+              color: #444;
+            }
+            .modal-image {
+              width: 100%;
+              height: auto;
+              margin: 0 auto;
+              display: block;
+          
+          }
 
       </style>
       <div class="modal">
           <div class="modal-content">
               <div class="modal-header">
                   <span class="close">&times;</span>
-                  <slot name="header"><h1>Test av Modal</h1></slot>
+                  <h1>Kampanje</h1>
               </div>
               <div class="modal-body">
-              <p>Her er innholdet.</p>
-              <a href="https://www.sol.no" target="_blank">En link til en annen side</a>
+              <img src="./Produkt_redigert_web.jpg" alt="Unit One undersentral" class="modal-image">
+              <p>EM Systemer har nå en kampanje rettet mot våre EM Portal kunder som har denne Unit One undersentralen som ble produsert fra 1994 til 1999 og som i gjennomsnitt har hatt 220.000 driftstimer!</p>
+              
+              <a href="https://emsystemer.no/" target="_blank" class="read-button">Les mer</a>
               </div>
           </div>
       </div>
@@ -101,6 +157,3 @@ class Modal extends HTMLElement {
 }
 customElements.define("kp-modal", Modal);
 const test = new Modal();
-window.onload = function () {
-  console.log("window loaded");
-};
