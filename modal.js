@@ -33,15 +33,18 @@ class Modal extends HTMLElement {
               line-height: 1.5;
               color: #444;
               text-align: center;
-              min-width: 500px;
-              max-width: 500px;
-              border-radius: 35px;
+              min-width: 800px;
+              display: flex;
+              border-radius: 20px;
           }
 
           .modal-content p {
-            width: 75%;
+            width: 80%;
             margin: auto;
-            padding: 30px;
+            padding: 0 30px 30px 30px;
+          }
+          .modal-header p:last-of-type {
+            padding-top: 0;
           }
 
           .read-button {
@@ -57,6 +60,7 @@ class Modal extends HTMLElement {
             cursor: pointer;
             width: 25%;
             border-radius: 35px;
+            font-weight: bold;
           }
           .read-button:hover {
             background-color: #34abd3;
@@ -79,11 +83,11 @@ class Modal extends HTMLElement {
           }
 
           .modal-header {
-          padding: 2px 16px;
+          padding: 7px 16px;
           background-color: #0e6fba;
           color: white;
           font-family: "Roboto", sans-serif;
-          border-radius: 35px 35px 0 0;
+          border-radius: 0px 20px 20px 0;
           }
 
           .modal-image {
@@ -94,24 +98,29 @@ class Modal extends HTMLElement {
               width: 350px;
           }
 
-          .modal-body {padding: 2px 16px; margin: 20px 2px;}
+          .modal-body {padding: 2px 16px; margin: 20px 2px; align-items:center; display: flex;}
 
           @media screen and (max-width: 768px) {
             .modal-content {
               min-width: 300px;
               font-size: 0.8em;
-          
+              flex-direction: column;
             }
+            .read-button {
+              width: 50%;
+            }
+.modal-header {
+  border-radius: 0 0 20px 20px;
+}
             .modal-content p {
               width: 100%;
               padding: 20px 0;
               margin: 0;
-              color: #444;
+
             }
             .modal-image {
               width: 100%;
               height: auto;
-              margin: 0 auto;
               display: block;
           
           }
@@ -119,15 +128,16 @@ class Modal extends HTMLElement {
       </style>
       <div class="modal">
           <div class="modal-content">
+              
+              <div class="modal-body">
+              <img src="./Produkt_redigert_web.jpg" alt="Unit One undersentral" class="modal-image">
+              </div>
               <div class="modal-header">
                   <span class="close">&times;</span>
                   <h1>Kampanje</h1>
-              </div>
-              <div class="modal-body">
-              <img src="./Produkt_redigert_web.jpg" alt="Unit One undersentral" class="modal-image">
-              <p>EM Systemer har nå en kampanje rettet mot våre EM Portal kunder som har denne Unit One undersentralen som ble produsert fra 1994 til 1999 og som i gjennomsnitt har hatt 220.000 driftstimer!</p>
-              
-              <a href="https://emsystemer.no/kampanjer" target="_blank" class="read-button">Les mer</a>
+                  <p>EM Systemer har nå en kampanje rettet mot våre EM Portal kunder som har denne Unit One undersentralen som ble produsert fra 1994 til 1999 og som i gjennomsnitt har hatt 220.000 driftstimer!</p>
+                  <p>Den kan nå erstattes med Unit One PRO</p>
+                  <a href="https://emsystemer.no/kampanjer" target="_blank" class="read-button">Jeg vil vite mer</a>
               </div>
           </div>
       </div>

@@ -20,10 +20,10 @@ Use the custom HTML element to create the modal. It should work wherever in the 
 <kp-modal> </kp-modal>
 ```
 
-And that should be it! The modal will be created and the content will be loaded. The visitor can close the modal by clicking anywhere but the "les mer"-button.
+And that should be it! The modal will be created and the content will be loaded. The visitor can close the modal by clicking anywhere but the "jeg vil vite mer"-button.
 
 ### Considerations
 
-The image that is loaded in the modal has the same path as the modal file, and should be adjusted accordingly if the image is loaded form a seperate folder.
+The image that is loaded in the modal has the same path as the modal file, and should be adjusted accordingly if the image is loaded from a seperate folder.
 
 The index.html file can be deleted as it is used for testing.
